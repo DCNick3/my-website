@@ -5,7 +5,9 @@ metadata:
   namespace: default
   annotations:
     kubernetes.io/ingress.class: "traefik"
-    cert-manager.io/cluster-issuer: letsencrypt-prod
+    cert-manager.io/issuer: cf-origin-prod
+    cert-manager.io/issuer-kind: OriginIssuer
+    cert-manager.io/issuer-group: cert-manager.k8s.cloudflare.com
 spec:
   rules:
     - host: my-website.dcnick3.me
