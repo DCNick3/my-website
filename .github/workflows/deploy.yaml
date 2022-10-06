@@ -17,6 +17,17 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
+      - uses: azure/k8s-set-context@v2
+        with:
+          method: kubeconfig
+          kubeconfig: '${{ secrets.KUBECONFIG }}'
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+        with:
+          driver: kubernetes
+          driver-opts: requests.cpu=6,requests.memory=4Gi
+
       - name: 'Build container'
         uses: docker/build-push-action@v3
         with:
