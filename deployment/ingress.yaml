@@ -1,0 +1,24 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: my-website-ingress
+  namespace: default
+  annotations:
+    kubernetes.io/ingress.class: "traefik"
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+spec:
+  rules:
+    - host: my-website.dcnick3.me
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: my-website
+                port:
+                  number: 80
+  tls:
+    - hosts:
+        - my-website.dcnick3.me
+      secretName: my-website-ingress-secret
