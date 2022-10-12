@@ -1,9 +1,5 @@
-<script lang="ts">
-    import avatar from '../files/avatar.png';
-</script>
-
 <div class="avatar">
-    <img src={avatar} alt="Avatar" />
+    <img src="/avatar.png" alt="Avatar" />
     <i class="star" style="
         position: absolute;
         top: 135px;

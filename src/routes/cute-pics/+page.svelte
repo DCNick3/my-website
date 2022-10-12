@@ -1,7 +1,6 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
     import { buildPalette, applyPalette, utils } from 'image-q';
-    import LoadingIndicator from './LoadingIndicator.svelte';
+    import LoadingIndicator from '$lib/LoadingIndicator.svelte';
 
     let image_container;
     let loading = true;

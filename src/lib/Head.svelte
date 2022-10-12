@@ -1,26 +1,32 @@
 <script lang="ts">
-    import logo from '../files/logo.png'
-    import chel from '../files/chel.gif'
-  </script>
-  
+  import Nav from '$lib/Nav.svelte'
+</script>
 <div class="head">
-    <div class="head-logo">
-        <img src={logo} alt="My Website" />
-    </div>
-    <div>
-        <span class="uwu">Uwu!</span>
-        <span style="color: #cc55cc;">Welcome to my home page.</span>
-        <img src={chel} style="vertical-align: middle;" alt="" />
-    </div>
+  <div class="head-logo">
+    <img src="/logo.png" alt="My Website" />
+  </div>
+
+  <Nav />
+
+  <div class="welcome">
+    <span class="uwu">Uwu!</span>
+    <span style="color: #cc55cc;">Welcome to my home page.</span>
+    <img src="/chel.gif" style="vertical-align: middle;" alt="" />
+  </div>
 </div>
 
 <style>
-.head {
-  text-align: center;
+.welcome {
   font-size: 1.7em;
 }
 
+.head {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
 .head-logo {
+  font-size: 1.7em;
   display: flex;
   flex-direction: row;
   justify-content: center;

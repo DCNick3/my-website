@@ -9,5 +9,5 @@ RUN cd /app \
 COPY . .
 RUN yarn build
 
-FROM nginx:alpine
-COPY --from=build /app/dist /usr/share/nginx/html
+FROM steebchen/nginx-spa:stable
+COPY --from=build /app/build /app

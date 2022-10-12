@@ -1,22 +1,20 @@
 <script lang="ts">
-  import bg from './files/bg.png'
-  import Head from './lib/Head.svelte'
-  import Profile from './lib/Profile.svelte'
-  import CutePic from './lib/CutePic.svelte'
+    import App from '$lib/App.svelte'
+    import Head from '$lib/Head.svelte'
 </script>
 
 <main>
   <div class="background">
     <!-- repeat them several times to be sure -->
-    <img src={bg} alt="" />
-    <img src={bg} alt="" />
-    <img src={bg} alt="" />
+    <img src="/bg.png" alt="" />
+    <img src="/bg.png" alt="" />
+    <img src="/bg.png" alt="" />
   </div>
 
-  <Head />
-  <Profile />
-  <CutePic />
-  
+  <App>
+    <Head />
+    <slot />
+  </App>
 </main>
 
 <style>

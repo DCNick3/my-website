@@ -1,11 +1,7 @@
-<script lang="ts">
-	import yui_wait from '../files/yui_wait.mp4'
-</script>
-
 <div class="indicator">
     <!-- svelte-ignore a11y-media-has-caption -->
     <video autoplay loop width=150>
-        <source src={yui_wait} type="video/mp4">
+        <source src="/yui_wait.mp4" type="video/mp4">
     </video>
 </div>
 
