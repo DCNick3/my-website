@@ -2,7 +2,7 @@
     import { buildPalette, applyPalette, utils } from 'image-q';
     import LoadingIndicator from '$lib/LoadingIndicator.svelte';
 
-    let image_container;
+    let image_container: Element;
     let loading = true;
 
     function img_to_canvas(img: HTMLImageElement): [HTMLCanvasElement, CanvasRenderingContext2D] {
